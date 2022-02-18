@@ -1,0 +1,146 @@
+html {
+  --bookDisplayHeight: clamp(200px, 10vh, 400px);
+  --bookDisplayWidth: clamp(300px, 10vw, 500px);
+  --bgColorMain: #5e719d;
+  --bgColorAccent: rgb(99, 97, 75);
+  --bgColorFun: #d3d3d3;
+  --bookLibraryHeight: minmax(100px, 60%);
+  background-color: var(--bgColorMain);
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: var(--bookLibraryHeight) 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.libDisplay {
+  grid-row: 1;
+  grid-column: 1 / 4;
+  justify-self: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2rem 1fr;
+}
+
+.formContainer {
+  grid-row: 2;
+  grid-column: 2;
+  background-color: var(--bgColorAccent);
+  border-radius: 10px;
+  padding: 10px;
+  height: 225px;
+}
+
+.myLibraryTitle {
+  align-self: center;
+  text-align: center;
+  margin-bottom: 1rem;
+  grid-row: 1;
+  grid-column: 1;
+  font-weight: bold;
+}
+
+.bookDisplay {
+  height: var(--bookDisplayHeight);
+  width: var(--bookDisplayWidth);
+  background-color: var(--bgColorFun);
+  display: grid;
+  grid-template-columns: 1fr 2rem 1rem;
+  grid-template-rows: 2rem repeat(3, 1fr);
+  font-size: 0.8rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 5px;
+  padding: 5px;
+  text-overflow: ellipsis;
+  overflow: scroll;
+  gap: 3px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#libraryDisplay {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: scroll;
+  height: 100%;
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.bookInfo {
+  word-wrap: normal;
+  color: black;
+}
+
+label {
+  font-size: 0.75rem;
+}
+
+.delBut {
+  width: 0.75rem;
+  height: 0.75rem;
+  grid-row: 1;
+  grid-column: 3/4;
+  background-color: rgb(255, 110, 110);
+  border: solid;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.delBut:hover {
+  background-color: red;
+}
+.readBut {
+  height: 0.75rem;
+  grid-row: 1;
+  grid-column: 2/3;
+  font-size: 0.5rem;
+  text-justify: center;
+  text-align: center;
+  background-color: rgb(95, 118, 252);
+  border: solid;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.readBut:hover {
+  background-color: rgb(24, 59, 255);
+}
+.titleLoc {
+  grid-row: 1;
+  grid-column: 1 / span 3;
+}
+
+.authorLoc {
+  grid-row: 2;
+  grid-column: 1 / span 3;
+}
+
+.pagesLoc {
+  grid-row: 3;
+  grid-column: 1 / span 3;
+}
+.readLoc {
+  grid-row: 4;
+  grid-column: 1 / span 3;
+}
+
+#addBook {
+  border-radius: 5px;
+  border-style: none;
+  background-color: lightblue;
+  height: 1.25rem;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="library.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="libDisplay">
+            <div class="myLibraryTitle">My Library</div>
+            <div id="libraryDisplay">
+
+            </div>
+
+        </div>
+        <div class="formContainer">
+            <form id='bookInfo' action="get">
+                <label for="title" class="titleLabel">Title:</label>
+                <input type="text" id="title"/>
+                <label for="author" class="authorLabel">Author:</label>
+                <input type="text" id="author"/>
+                <label for="pages" class="pagesLabel">Pages:</label>
+                <input type="text" id="pages"/>
+                <label for="read" class="readLabel">I have read it:</label>
+                <input type="radio" id="read" name="isRead" value="true">
+                <label for="notRead" class="notReadLabel">I have not read it:</label>
+                <input type="radio" id="notRead" name="isRead" value="false">
+            </form>
+            <button id="addBook">Add Book</button>
+            <button id="test">test</button>
+        </div>
+    </div>
+
+</body>
+</html>
